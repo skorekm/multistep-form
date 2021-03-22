@@ -10,6 +10,7 @@ const Main = styled.div`
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
+  position: relative;
 `;
 
 const App = () => {
