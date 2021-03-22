@@ -1,7 +1,7 @@
 # multistep-form
 Idea of this project is to have a structure for the very common thing, which is form.
 
-Project's aim is to create a set of a components wrappers for the Formik and also have some fun with styles.
+Project's aim is to create a set of a components wrappers for the Formik field with material-ui. I've been using it quite often recently, hence it's quite convinient for me to have a place, where they are stored.
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,25 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Form } from './Form';
+import styled, { ThemeProvider } from 'styled-components';
+import { theme } from './theme';
 import './index.css';
+
+const Main = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: #fff;
+`;
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
+    <ThemeProvider theme={theme}>
+      <Main>
+        <Form />
+      </Main>
+    </ThemeProvider>
+  );
 }
 
 ReactDOM.render(
