@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export const useStepper = () => {
   const [activeStep, setActiveStep] = useState(0);
