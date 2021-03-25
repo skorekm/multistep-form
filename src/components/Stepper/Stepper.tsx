@@ -1,16 +1,14 @@
-import { Stepper as MUIStepper, Step, StepLabel } from '@material-ui/core';
+import { Step, StepLabel } from '@material-ui/core';
+import { StepperWrapper } from './Stepper.styles';
 
 export const Stepper = ({ steps, current }:{ steps: string[], current: number }) => {
   return (
-      <div>
-        <MUIStepper activeStep={current} orientation={'horizontal'}>
-          {steps.map((label) => (
-            <Step key={label}>
-              <StepLabel>{label}</StepLabel>
-            </Step>
-          ))}
-        </MUIStepper>
-      </div>
-
+    <StepperWrapper activeStep={current} orientation={'horizontal'} alternativeLabel>
+      {steps.map((label) => (
+        <Step key={label}>
+          <StepLabel>{label}</StepLabel>
+        </Step>
+      ))}
+    </StepperWrapper>
   );
 }
