@@ -1,5 +1,5 @@
 // import get from 'lodash/get';
-import {TextField, TextFieldProps } from "@material-ui/core";
+import { TextField, TextFieldProps } from "@material-ui/core";
 import { FieldInputProps, FieldMetaProps, FormikProps } from 'formik';
 
 // TODO: figure out generics, in formik files it's any as well

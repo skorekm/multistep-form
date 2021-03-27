@@ -12,7 +12,7 @@ export const Form = () => {
         steps={['Step 1']}
       />
       <FormWrapper
-        boxShadow={2}
+        
       >
         <Formik
           initialValues={{ title: '' }}
@@ -21,6 +21,8 @@ export const Form = () => {
           <Field
             name="title"
             variant="outlined"
+            label="Text label"
+            placeholder="Sample placeholder"
             fullWidth
             component={FormikTextField}
           />
