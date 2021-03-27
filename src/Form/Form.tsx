@@ -7,13 +7,11 @@ import { Container } from '@material-ui/core';
 export const Form = () => {
   return (
     <Container>
-      <Stepper
-        current={0}
-        steps={['Step 1']}
-      />
-      <FormWrapper
-
-      >
+      <FormWrapper>
+        <Stepper
+          current={0}
+          steps={['Step 1']}
+        />
         <Formik
           initialValues={{ title: '', description: '' }}
           onSubmit={(values) => console.log(values)}
