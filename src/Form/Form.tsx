@@ -12,20 +12,32 @@ export const Form = () => {
         steps={['Step 1']}
       />
       <FormWrapper
-        
+
       >
         <Formik
-          initialValues={{ title: '' }}
+          initialValues={{ title: '', description: '' }}
           onSubmit={(values) => console.log(values)}
         >
-          <Field
-            name="title"
-            variant="outlined"
-            label="Text label"
-            placeholder="Sample placeholder"
-            fullWidth
-            component={FormikTextField}
-          />
+          <>
+            <Field
+              name="title"
+              variant="outlined"
+              label="Text label"
+              placeholder="Sample placeholder"
+              fullWidth
+              component={FormikTextField}
+            />
+            <Field
+              name="description"
+              variant="outlined"
+              label="Description"
+              placeholder="Sample placeholder"
+              fullWidth
+              multiline
+              rows={4}
+              component={FormikTextField}
+            />
+          </>
         </Formik>
       </FormWrapper>
     </Container>

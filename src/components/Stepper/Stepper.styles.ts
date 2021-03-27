@@ -5,4 +5,4 @@ export const StepperWrapper = styled(Stepper)`
   && {
     background: ${({ theme }) => theme.palette.background.paper};
   }
-`
+`;
