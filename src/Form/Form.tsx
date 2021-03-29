@@ -1,19 +1,43 @@
-import { Formik } from 'formik';
+import { Field, Formik } from 'formik';
+import { FormikTextField } from '../shared/FormikTextField';
 import { FormWrapper } from './Form.styles';
+import { Stepper } from '../components/Stepper';
+import { Container } from '@material-ui/core';
 
 export const Form = () => {
   return (
-    <FormWrapper>
-      <Formik
-        initialValues={
-          {
-            title: ''
-          }
-        }
-        onSubmit={(values) => console.log(values)}
-      >
-        
-      </Formik>
-    </FormWrapper>
+    <Container>
+      <FormWrapper>
+        <Stepper
+          current={0}
+          steps={['Step 1']}
+        />
+        <Formik
+          initialValues={{ title: '', description: '' }}
+          onSubmit={(values) => console.log(values)}
+        >
+          <>
+            <Field
+              name="title"
+              variant="outlined"
+              label="Text label"
+              placeholder="Sample placeholder"
+              fullWidth
+              component={FormikTextField}
+            />
+            <Field
+              name="description"
+              variant="outlined"
+              label="Description"
+              placeholder="Sample placeholder"
+              fullWidth
+              multiline
+              rows={4}
+              component={FormikTextField}
+            />
+          </>
+        </Formik>
+      </FormWrapper>
+    </Container>
   )
 };
