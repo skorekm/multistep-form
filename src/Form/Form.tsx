@@ -1,16 +1,19 @@
+import { Container, Button } from '@material-ui/core';
 import { Field, Formik } from 'formik';
 import { FormikTextField } from '../shared/FormikTextField';
-import { FormWrapper } from './Form.styles';
 import { Stepper } from '../components/Stepper';
-import { Container } from '@material-ui/core';
+import { useStepper } from '../components/Stepper/useStepper';
+import { FormWrapper, FormNavigation } from './Form.styles';
 
 export const Form = () => {
+  const formSteps = ['Step 1', 'Step 2', 'Step 3'];
+  const { handleNext, handleBack, activeStep } = useStepper();
   return (
     <Container>
       <FormWrapper>
         <Stepper
-          current={0}
-          steps={['Step 1']}
+          current={activeStep}
+          steps={formSteps}
         />
         <Formik
           initialValues={{ title: '', description: '' }}
@@ -37,6 +40,17 @@ export const Form = () => {
             />
           </>
         </Formik>
+        <FormNavigation>
+          <Button 
+            variant="contained"
+            onClick={() => handleBack()}
+          >Back</Button>
+          <Button
+           onClick={() => handleNext()}
+           variant="contained"
+           color="primary"
+          >Next</Button>
+        </FormNavigation>
       </FormWrapper>
     </Container>
   )

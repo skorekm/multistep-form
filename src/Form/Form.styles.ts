@@ -12,3 +12,10 @@ export const FormWrapper = styled(Paper)`
     background: ${({ theme }) => theme.palette.background.paper};
   }
 `;
+
+export const FormNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 12px;
+`;
