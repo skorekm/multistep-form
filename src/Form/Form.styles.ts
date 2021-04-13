@@ -9,6 +9,13 @@ export const FormWrapper = styled(Paper)`
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     border-radius: 5px;
-    background: ${({ theme }) => theme.palette.background.paper};
+    background: ${({ theme }) => theme.palette.background};
   }
+`;
+
+export const FormNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 12px;
 `;
