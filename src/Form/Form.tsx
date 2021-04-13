@@ -5,6 +5,7 @@ import { Stepper } from '../components/Stepper';
 import { useStepper } from '../components/Stepper/useStepper';
 import { FormWrapper, FormNavigation } from './Form.styles';
 import { FormikSwitchField } from '../shared/FormikSwitchField';
+import { FormikCheckboxField } from '../shared/FormikCheckboxField';
 
 export const Form = () => {
   const formSteps = ['Step 1', 'Step 2', 'Step 3'];
@@ -44,6 +45,11 @@ export const Form = () => {
               label="Switch field"
               color="primary"
               component={FormikSwitchField}
+            />
+            <Field
+              name="remember"
+              label="Keep me logged in"
+              component={FormikCheckboxField}
             />
           </>
         </Formik>
