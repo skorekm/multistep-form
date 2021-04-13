@@ -9,7 +9,7 @@ export const FormWrapper = styled(Paper)`
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     border-radius: 5px;
-    background: ${({ theme }) => theme.palette.background.paper};
+    background: ${({ theme }) => theme.palette.background};
   }
 `;
 

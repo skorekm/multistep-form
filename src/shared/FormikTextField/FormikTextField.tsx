@@ -15,21 +15,8 @@ export const FormikTextField = ({
   meta,
   form,
   type,
-  // decoratorStart,
-  // decoratorEnd,
-  // precision,
   ...otherProps
 }: FormikTextFieldProps) => {
-  // const isInvalid = get(form.errors, field.name) && (get(form.touched, field.name) || form.submitCount > 0);
-  // const handleKeyPress = (evt:any) => {
-  //   if (
-  //     otherProps.type === "number" &&
-  //     ["e", "E", "+", "-"].includes(evt.key)
-  //   ) {
-  //     evt.preventDefault();
-  //   }
-  // };
-
   return (
     <>
       <TextField
